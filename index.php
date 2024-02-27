@@ -10,37 +10,37 @@
     <h1>Калькулятор ЕГЭ</h1>
 
     <form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        <input type="checkbox" name="filter1" id="filter1">
+        <input type="checkbox" name="filter1" id="filter1" <?php if(isset($_GET['filter1'])) echo "checked='checked'";?>>
         <label for="filter1">Русский язык</label>
         <br>
-        <input type="checkbox" name="filter2" id="filter2">
+        <input type="checkbox" name="filter2" id="filter2" <?php if(isset($_GET['filter2'])) echo "checked='checked'";?>>
         <label for="filter2">Математика – профильная</label>
         <br>
-        <input type="checkbox" name="filter3" id="filter3">
+        <input type="checkbox" name="filter3" id="filter3" <?php if(isset($_GET['filter3'])) echo "checked='checked'";?>>
         <label for="filter3">Физика</label>
         <br>
-        <input type="checkbox" name="filter4" id="filter4">
+        <input type="checkbox" name="filter4" id="filter4" <?php if(isset($_GET['filter4'])) echo "checked='checked'";?>>
         <label for="filter4">Информатика и ИКТ</label>
         <br>
-        <input type="checkbox" name="filter5" id="filter5">
+        <input type="checkbox" name="filter5" id="filter5" <?php if(isset($_GET['filter5'])) echo "checked='checked'";?>>
         <label for="filter5">Химия</label>
         <br>
-        <input type="checkbox" name="filter6" id="filter6">
+        <input type="checkbox" name="filter6" id="filter6" <?php if(isset($_GET['filter6'])) echo "checked='checked'";?>>
         <label for="filter6">Биология</label>
         <br>
-        <input type="checkbox" name="filter7" id="filter7">
+        <input type="checkbox" name="filter7" id="filter7" <?php if(isset($_GET['filter7'])) echo "checked='checked'";?>>
         <label for="filter7">Архитектурный рисунок (Творческое испытание )</label>
         <br>
-        <input type="checkbox" name="filter8" id="filter8">
+        <input type="checkbox" name="filter8" id="filter8" <?php if(isset($_GET['filter8'])) echo "checked='checked'";?>>
         <label for="filter8">Академический рисунок (Творческое испытание )</label>
         <br>
-        <input type="checkbox" name="filter9" id="filter9">
+        <input type="checkbox" name="filter9" id="filter9" <?php if(isset($_GET['filter9'])) echo "checked='checked'";?>>
         <label for="filter9">Обществознание</label>
         <br>
-        <input type="checkbox" name="filter10" id="filter10">
+        <input type="checkbox" name="filter10" id="filter10" <?php if(isset($_GET['filter10'])) echo "checked='checked'";?>>
         <label for="filter10">История</label>
         <br>
-        <input type="checkbox" name="filter11" id="filter11">
+        <input type="checkbox" name="filter11" id="filter11" <?php if(isset($_GET['filter11'])) echo "checked='checked'";?>>
         <label for="filter11">Иностранный язык</label>
         <br>
         <input type="submit" value="Рассчитать">
