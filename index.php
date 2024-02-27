@@ -87,12 +87,14 @@
             for ($row = 2; $activeWorksheet->getCell("a$row")->getValue() != ''; $row++) {
                 // Get a record out of the table
                 $record = [];
+                $isNotFull = false;
                 foreach ($columns as $column) {
                     $record[] = $activeWorksheet->getCell("$column$row")->getValue();
+                    $isNotFull = end($record) == '' ? true : $isNotFull;
                 }
 
                 // Check if the record has chosen filters
-                $containsSearch = count(array_intersect($filters, $record)) === count($filters);
+                $containsSearch = count(array_intersect($filters, $record)) > 3 || (count(array_intersect($filters, $record)) > 2 && $isNotFull);
                 if (!$containsSearch) {
                     continue;
                 }
